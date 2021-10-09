@@ -57,9 +57,12 @@ To develop a sample instagram backend API, which makes life easier.
 - Postman API is been used to test this application
 - The application have been tested manually 
 - Download postman from [here](https://www.postman.com/downloads/)
-- *Not that the output and input gitis always in JSON format*
+- *Note that the output and input gitis always in JSON format*
 
-## Do use this API in your application to make your life easier. Improvements are welcome. ```git clone```, ```git commit -m "Changes are welcome"```, ```git push```
+## Do use this API in your application to make your life easier. Improvements are welcome. 
+- ```git clone```
+- ```git commit -m "Changes are welcome"``` 
+- ```git push```
  
 
 
