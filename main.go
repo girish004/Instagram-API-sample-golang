@@ -28,7 +28,7 @@ type postd struct {
 	timestamp string `json:"timestamp,omitempty" bson:"timestamp,omitempty"`
 }
 
-var connection_string string = "mongodb+srv://Girish:Girish%40123@cluster0.gefkt.mongodb.net/test?retryWrites=true&w=majority"
+var connection_string string = ""
 
 func makeconnection() {
 	client, err := mongo.NewClient(options.Client().ApplyURI(connection_string))
