@@ -16,7 +16,7 @@ To develop a sample instagram backend API, which makes life easier.
   - Name
   - Email
   - Password
- - posts contains the files
+- posts contains the files
   - Id
   - Caption
   - Image URL
