@@ -11,4 +11,56 @@ To develop a sample instagram backend API, which makes life easier.
 ### Taking a deeper dive
 - Don't worry about the database collection structure, it is well organized
 - Two collection is created, ```users``` and ```posts```
+- User contains the files 
+  - Id
+  - Name
+  - Email
+  - Password
+ - posts contains the files
+  - Id
+  - Caption
+  - Image URL
+  - Posted Timestamp
+### Functions and routes that are used
+- ```/user``` 
+  - This route gets the data in ```POST``` method and in JSON format
+  - ```adduser``` function does the role of adding the user to the collection
+  - Returns the added file's ID in JSON format
+
+- ```/user/<id>``` 
+  - This route gets the data in ```GET``` method and from the URL
+  - The ID in the url represents the ID of the user
+  - ```getuser``` function does the role of getting the user's details
+  - User's detail is returned in JSON format
+
+- ```/posts``` 
+  - This route gets the data in ```POST``` method and in JSON format
+  - ```addpost``` function does the role of adding the post to the collection along with the user id
+  - Returns the added file's ID in JSON format
+
+- ```/posts/<id>``` 
+  - This route gets the data in ```GET``` method and in JSON format
+  - ```getpost``` function does the role of getting the post information
+  - The id that is extracted from the URL is used for to extract the details from the collection
+  - Returns the details of the posts in JSON format
+
+- ```/posts/users/<id>``` 
+  - This route gets the data in ```GET``` method and in JSON format
+  - ```listpost``` function does the role of getting the posts and it's information posted by the particular user
+  - The id that is extracted from the URL is used for to extract the details from the collection
+  - Returns the details of the posts in JSON format
+
+### Routing and API information
+- As mentioned in the requirements, this API is a ```JSON``` ```HTTP``` API using the ```net\http``` and ```encoding\json``` library of golang
+
+### Testing API
+- Postman API is been used to test this application
+- The application have been tested manually 
+- Download postman from [here](https://www.postman.com/downloads/)
+- *Not that the output and input gitis always in JSON format*
+
+## Do use this API in your application to make your life easier. Improvements are welcome. ```git clone```, ```git commit -m "Changes are welcome"```, ```git push```
+ 
+
+
 
