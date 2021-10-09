@@ -64,7 +64,6 @@ func adduser(response http.ResponseWriter, request *http.Request) {
 		defer client.Disconnect(ctx)
 		res, err := userscol.InsertOne(ctx, user)
 		if err != nil {
-			fmt.Println("Hi")
 			log.Fatal(err)
 		}
 		json.NewEncoder(response).Encode(res)
@@ -77,7 +76,6 @@ func adduser(response http.ResponseWriter, request *http.Request) {
 func getuser(response http.ResponseWriter, request *http.Request) {
 	userid := request.URL.Query().Get("id")
 	var id, _ = primitive.ObjectIDFromHex(userid)
-	fmt.Println("Hello")
 	response.Header().Add("content-type", "application/json")
 	client, err := mongo.NewClient(options.Client().ApplyURI(connection_string))
 	_ = err
@@ -119,7 +117,6 @@ func addpost(response http.ResponseWriter, request *http.Request) {
 		defer client.Disconnect(ctx)
 		res, err := postcol.InsertOne(ctx, post)
 		if err != nil {
-			fmt.Println("HI")
 			log.Fatal(err)
 		}
 		json.NewEncoder(response).Encode(res)
@@ -131,7 +128,6 @@ func addpost(response http.ResponseWriter, request *http.Request) {
 
 func listpost(response http.ResponseWriter, request *http.Request) {
 	userid := request.URL.Query().Get("id")
-	fmt.Println("Hello")
 	response.Header().Add("content-type", "application/json")
 	client, err := mongo.NewClient(options.Client().ApplyURI(connection_string))
 	_ = err
