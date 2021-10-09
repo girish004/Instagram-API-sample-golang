@@ -56,7 +56,6 @@ func adduser(response http.ResponseWriter, request *http.Request) {
 		userscol := insta.Collection("users")
 		var user userd
 		json.NewDecoder(request.Body).Decode(&user)
-		fmt.Println("Conn")
 		ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
 		err = client.Connect(ctx)
 		if err != nil {
@@ -65,6 +64,7 @@ func adduser(response http.ResponseWriter, request *http.Request) {
 		defer client.Disconnect(ctx)
 		res, err := userscol.InsertOne(ctx, user)
 		if err != nil {
+			fmt.Println("Hi")
 			log.Fatal(err)
 		}
 		json.NewEncoder(response).Encode(res)
